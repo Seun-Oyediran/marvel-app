@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { LoaderStyle } from '../animation/styled'
 import { DataContext } from './Context'
 import { AnimatePresence, motion } from 'framer-motion'
+import { loaderAnimation } from '../animation/framer-motion'
 
 
 
@@ -10,7 +11,13 @@ const Loader = () => {
 
 
     return (
-        <motion.div>
+
+        <motion.div
+            variants={loaderAnimation}
+            initial='initial'
+            animate='animate'
+            exit='exit'
+        >
             <LoaderStyle className={darkTheme ? 'background dark-bg' : 'background light-bg'}>
                 <div>
                     <img src="/img/5.png" alt="marvelhome" />
@@ -18,6 +25,8 @@ const Loader = () => {
                 </div>
             </LoaderStyle>
         </motion.div>
+
+
 
     )
 }

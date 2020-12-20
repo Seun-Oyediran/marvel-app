@@ -28,7 +28,7 @@ export default function Context({ children }) {
         }
         setTimeout(() => {
             setLoader(false)
-        }, 3000);
+        }, 4000);
 
     }, [])
 

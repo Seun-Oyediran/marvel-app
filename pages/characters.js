@@ -3,7 +3,7 @@ import SideBar from '../components/SideBar'
 import Header from '../components/Header'
 import Title from '../components/Title'
 import Background from '../components/Background'
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { homeBox } from '../animation/framer-motion'
 import CharsContent from '../components/CharsContent'
 import '../styles/CharsContent.css'
@@ -12,12 +12,13 @@ import { DataContext } from '../components/Context'
 import SmallTitle from '../components/SmallTitle'
 import Menu from '../components/Menu'
 import NavBar from '../components/NavBar'
+import Loader from '../components/Loader'
 
 
 
 const characters = () => {
     const [selected, setSelected] = useState(null)
-    const { darkTheme, favourites, showMenu } = useContext(DataContext)
+    const { darkTheme, favourites, showMenu, loader } = useContext(DataContext)
 
 
     return (
@@ -25,6 +26,10 @@ const characters = () => {
             <Header title='Characters' />
             <Background>
                 <div className="container">
+                    <AnimatePresence exitBeforeEnter>
+                        {loader && <Loader />}
+                    </AnimatePresence>
+
                     <SideBar />
                     <Menu />
                     <NavBar />

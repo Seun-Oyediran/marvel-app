@@ -3,7 +3,7 @@ import SideBar from '../components/SideBar'
 import Header from '../components/Header'
 import Title from '../components/Title'
 import Background from '../components/Background'
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
 import { homeBox } from '../animation/framer-motion'
 import FavContent from '../components/favContent'
 import '../styles/CharsContent.css'
@@ -28,8 +28,10 @@ const favourites = () => {
             <Background>
 
                 <div className="container">
+                    <AnimatePresence exitBeforeEnter>
+                        {loader && <Loader />}
+                    </AnimatePresence>
 
-                    {loader && <Loader />}
                     <NavBar />
 
 

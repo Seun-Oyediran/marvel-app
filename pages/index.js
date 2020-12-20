@@ -11,10 +11,11 @@ import Title from '../components/Title'
 import Content from '../components/Content'
 import Menu from '../components/Menu'
 import NavBar from '../components/NavBar'
+import Loader from '../components/Loader'
 
 
 export default function Home() {
-  const { showMenu } = useContext(DataContext)
+  const { showMenu, loader } = useContext(DataContext)
 
 
 
@@ -24,6 +25,10 @@ export default function Home() {
       <>
         <Background>
           <div className="container">
+            <AnimatePresence exitBeforeEnter>
+              {loader && <Loader />}
+            </AnimatePresence>
+
             <SideBar />
             <Menu />
             <NavBar />
