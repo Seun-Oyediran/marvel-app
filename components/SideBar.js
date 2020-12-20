@@ -10,7 +10,7 @@ const ulLinks = [
     { name: 'Home', path: '/' },
     { name: 'Characters', path: '/characters' },
     { name: 'Favourites', path: '/favourites' },
-    { name: 'About Us', path: '/about' },
+    // { name: 'About Us', path: '/about' },
 ]
 
 const SideBar = () => {
