@@ -1,0 +1,337 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --white: #ffffff;
+    --white-light: rgba(255,255,255,0.6);
+    --black: black;
+    --black-light: rgba(0,0,0,0.6);
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dark-bg{
+    background: linear-gradient(298deg, #0f0f0f, black);
+    color:var(--white);
+}
+.light-bg{
+    background: linear-gradient(298deg, #D7E1EC,white );
+    /* background-color: white; */
+    color: var(--black);
+}
+.light-text{
+    opacity: 0.6;
+}
+.background{
+    background-size: 200% 200%;
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+
+
+.home-box{
+    min-height: 100vh;
+    width:100%;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+    /* margin: 1.5rem 2rem; */
+    padding: 1.5rem 6rem;
+    min-height: 100%;
+    /* position: relative; */
+    /* padding-right:1rem; */
+}
+
+
+
+
+/* SIDEBAR CSS */
+.side-bar{
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    z-index: 6;
+    transition: 0.3s all ease;
+    /* position: relative; */
+}
+
+.side-bar-open{
+    width: 250px;
+}
+
+.side-bar-close{
+    width: 0px;
+}
+
+.side-bar > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 2rem 2rem;
+}
+
+
+.side-bar > div > div{
+    margin: 1.5rem 0;
+}
+
+
+.profile h4{
+    margin:0.3rem;
+}
+
+.profile img{
+    display: block;
+    height: 60px;
+    width:60px;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.side-bar-links ul{
+    list-style: none;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size:22px;
+    /* color:var(--white); */
+}
+
+.side-bar-links li{
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+}
+
+/* END OF SIDEBAR CSS */
+
+
+
+
+/* REMAINING CLASS CSS */
+.remaining{
+    margin-top: 50px;
+    margin-left: 0px;
+    padding: 0rem 1rem ;
+    /* position: relative; */
+    transition: 0.3s all ease;
+}
+.remaining-close{
+    margin-top: 50px;
+    margin-left:0px;
+    padding: 0rem 1rem ;
+}
+
+/* END OF REMAINING CSS */
+
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    margin-top: 2rem;
+}
+
+
+
+.pagination button{
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border-radius: 12px;
+    background-color: #C5554D;
+    background-color: #e65100;
+    background-color: #c62828;
+    color: white;
+    border: none;
+    margin: 0 1rem;
+    box-shadow: 0px 0px 4px red;
+    cursor: pointer;
+}
+
+.pagination button:hover{
+    transform: scale(1.1);
+}
+
+.page-jump{
+    display: flex;
+    font-size: 17px;
+    justify-content: center;
+    align-items: center;
+}
+
+.jump{
+    margin: 0.2rem 0;
+    text-align: center;
+    font-size: 15px;
+    color: tomato;
+    font-weight:600;
+}
+
+.small-title-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.small-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+.small-title:hover{
+    transform: scale(1.07);
+    color: #c62828;
+}
+
+.small-title img{
+    /* max-height: 30px; */
+    max-width: 30px;
+    height: auto;
+}
+.small-title span{
+    margin-left: 3px;
+    font-size: 11px;
+    color: #c62828;
+    /* color: #120a8f; */
+    font-weight: 800;
+}
+
+
+.remove-button{
+    background-color: #c62828;
+    width: 100%;
+}
+
+.remove-button button{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem 0.25rem;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+}
+
+.remove-all{
+    color: #c62828;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 1rem 0;
+    display: inline-block;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.remove-all:hover{
+    transform: scale(1.06);
+}
+
+.add{
+    background-color: #01579b;
+}
+
+.remove-button button:hover{
+    color: black;
+}
+
+.favourite-added{
+    cursor: none;
+    width: 100%;
+    /* height: 100%; */
+}
+
+.favourite-added>button{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #43a047;
+    color: white;
+    padding: 10px 25px;
+    font-size: 16px;
+    /* font-weight: 600; */
+}
+
+.char-added{
+    position: fixed;
+    z-index: 100;
+    display: inline-block;
+    padding:5px 45px;
+    background-color: #43a047;
+    top: 10px;
+    right: 50%;
+   
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.big-title{
+    margin-bottom: 1.5rem;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+@media(max-width:1000px){
+    .container{
+        padding: 1.5rem 4rem;
+    }
+}
+
+@media(max-width: 800px){
+    .container{
+        padding: 1rem 2rem;
+    }
+    .big-title{
+        text-align: center;
+    }
+}
+
+@media(max-width: 500px){
+    .container{
+        padding: 0.75rem ;
+    }
+    .big-title{
+        text-align: center;
+    }
+}
+
