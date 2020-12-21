@@ -11,23 +11,16 @@ const Loader = () => {
 
 
     return (
-
-        <motion.div
+        <motion.div className={darkTheme ? 'background dark-bg loader-style' : 'background light-bg loader-style'}
             variants={loaderAnimation}
             initial='initial'
             animate='animate'
-            exit='exit'
-        >
-            <LoaderStyle className={darkTheme ? 'background dark-bg' : 'background light-bg'}>
-                <div>
-                    <img src="/img/5.png" alt="marvelhome" />
-                    <p>Developed by Oyediran Seun using Marvel API</p>
-                </div>
-            </LoaderStyle>
+            exit='exit'>
+            <div>
+                <img src="/img/5.png" alt="marvelhome" />
+                <p>Developed by Oyediran Seun using Marvel API</p>
+            </div>
         </motion.div>
-
-
-
     )
 }
 

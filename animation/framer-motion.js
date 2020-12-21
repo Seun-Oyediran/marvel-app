@@ -88,16 +88,23 @@ export const closer = {
     }
 }
 
+// const x = ['-100%', '+100%']
+// const pos = ['x', 'y']
+// let index = 
+
 export const loaderAnimation = {
     initial: {
         opacity: 1,
     },
     animate: {
         opacity: 1,
+        zIndex: 20,
         transition: { duration: 0.2 }
     },
     exit: {
-        y: '100%',
-
+        opacity: 0.3,
+        x: '100%',
+        zIndex: 20,
+        transition: { duration: 0.5 }
     }
 }

@@ -295,6 +295,36 @@ img{
     margin-bottom: 1.5rem;
 }
 
+.loader-style{
+    position: fixed;
+    top:0;
+    left:0 ;
+    right: 0;
+    bottom: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.loader-style div{
+    padding:1rem 2rem;
+}
+
+.loader-style img{
+    display:block;
+    max-width: 500px;
+}
+
+.loader-style p{
+    margin:1rem 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 51%}
